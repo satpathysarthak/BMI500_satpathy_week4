@@ -64,7 +64,7 @@ label=name)
 ax.legend(numpoints=1)
 #ax.set_ylim((0, 500000))
 plt.draw()
-plt.savefig('./TCGA_plot_Class.png', dpi=300, bbox_inches='tight')
+plt.savefig('./output/TCGA_plot_Class.png', dpi=300, bbox_inches='tight')
 
 # plot: predicted with clusters
 
@@ -77,6 +77,6 @@ label=name)
 ax.legend(numpoints=1)
 #ax.set_ylim((0, 500000))
 plt.draw()
-plt.savefig('./TCGA_plot_GMMs.png', dpi=300, bbox_inches='tight')
+plt.savefig('./output/TCGA_plot_GMMs.png', dpi=300, bbox_inches='tight')
         
         
