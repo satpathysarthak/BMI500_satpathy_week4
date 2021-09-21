@@ -13,7 +13,7 @@ data = pd.read_csv('./datasets/TCGA-PANCAN-HiSeq-801x20531/data.csv')
 labels = pd.read_csv('./datasets/TCGA-PANCAN-HiSeq-801x20531/labels.csv')
 
 # preparing the dataset 
-data.drop(data.columns[0], axis=1) # removing the ID column and keeping gene expression. Each gene is a variable.
+data = data.drop(data.columns[0], axis=1) # removing the ID column and keeping gene expression. Each gene is a variable.
 X = data # X stores the matrix of gene expression data 
 y = labels["Class"] # y stores the labels associated with that (PRAD, BRCA, KIRC, LUAD, COAD)
 
