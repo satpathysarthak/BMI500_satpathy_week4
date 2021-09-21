@@ -45,3 +45,38 @@ score = adjusted_rand_score(y_id, y_cluster_gmm)
 print(score)
 
 
+# To visualize the results and store clusters
+df_plot = X_pca.copy() # copies the PCA columns
+df_plot['ClusterGMMs'] = y_cluster_gmm # adds the GMM clusters 
+df_plot['Class'] = y_id # adds actual labels as reference
+
+# this is the result from the analysis which stores the PCs and cluster/predicted and original labels
+df_plot.to_csv('./output/labels_classes.csv',index=False)
+df_plot['Cancer'] = y
+
+# plot: original with labels
+fig=plt.figure()
+fig, ax = plt.subplots()
+groups = df_plot.groupby('Cancer')
+for name, group in groups:
+    ax.plot(group.PC1, group.PC2, marker='o', linestyle='', ms=3, 
+label=name)
+ax.legend(numpoints=1)
+#ax.set_ylim((0, 500000))
+plt.draw()
+plt.savefig('./TCGA_plot_Class.png', dpi=300, bbox_inches='tight')
+
+# plot: predicted with clusters
+
+fig=plt.figure()
+fig, ax = plt.subplots()
+groups = df_plot.groupby('ClusterGMMs')
+for name, group in groups:
+    ax.plot(group.PC1, group.PC2, marker='o', linestyle='', ms=3, 
+label=name)
+ax.legend(numpoints=1)
+#ax.set_ylim((0, 500000))
+plt.draw()
+plt.savefig('./TCGA_plot_GMMs.png', dpi=300, bbox_inches='tight')
+        
+        
