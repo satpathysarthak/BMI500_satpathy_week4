@@ -29,3 +29,19 @@ X_pca_array = pca.transform(X_scaled) # this array stores the
 #X_pca = pd.DataFrame(X_pca_array, columns=['PC1','PC2']) 
 X_pca = pd.DataFrame(X_pca_array, columns=['PC1','PC2','PC3','PC4','PC5']) # Add the column names according to the ndimensions
 
+# Using sklearn GMM to fit
+nclusters = 5 # set the desired number of clusters here
+gmm = GaussianMixture(n_components=nclusters)
+gmm.fit(X_pca)
+
+# predict the cluster for each data point
+y_cluster_gmm = gmm.predict(X_pca)
+# y_cluster_gmm
+
+# Changing the categorical labels PRAD, BRCA, KIRC, LUAD, COAD into arbitrary integers
+y_id = pd.Categorical(labels['Class']).codes # these nodes would be different from 
+
+score = adjusted_rand_score(y_id, y_cluster_gmm)
+print(score)
+
+
