@@ -4,9 +4,9 @@ import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
+from sklearn.decomposition import PCA
 from sklearn.mixture import GaussianMixture
 from sklearn.metrics.cluster import adjusted_rand_score
-
 # The pancancer dataset in the datsets directory
 # tar gunzip the tar.gz file 
 data = pd.read_csv('./datasets/TCGA-PANCAN-HiSeq-801x20531/data.csv')
