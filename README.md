@@ -51,6 +51,19 @@ The following is the snippet of the time it took to run the code and memory used
 
 The program took a total time of 43.57s and memory of 325MB. The step with the maximum memory allocation required 128MB.
 
+## Outputs
+The output generated from the proram include a csv file which has the PC1-5 values, cluster label and true label. It has to be noted that the labels in both predicted and true labels are abritrarily numbered. Hence, may or may not be similar.
+
+Two plots are generated with PC1 in the x-axis and PC2 in the y-axis. First one is colored by the true labels and the other by predicted clusters.
+
+### True Labels
+
+![Fig2](TCGA_plot_Class.png)
+
+### Predicted Labels
+
+![Fig3](TCGA_plot_GMMs.png)
+
 
 ## References
 1. Weinstein, John N., et al. 'The cancer genome atlas pan-cancer analysis project.' Nature genetics 45.10 (2013): 1113-1120.
