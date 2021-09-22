@@ -49,7 +49,7 @@ The following is the snippet of the time it took to run the code and memory used
 
 ![Run_Mem](runtime_mem.png)
 
-The program took a total time of 43.56s and memory of 325MB. The step with the maximum memory allocation required 128MB.
+The program took a total time of 43.57s and memory of 325MB. The step with the maximum memory allocation required 128MB.
 
 
 ## References
