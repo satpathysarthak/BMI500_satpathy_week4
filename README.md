@@ -49,9 +49,10 @@ The following is the snippet of the time it took to run the code and memory used
 
 ![Run_Mem](runtime_mem.png)
 
-The program took a total time of 43.56s and memory of 325MB. The step with the maximum memory allocation required 128MB space.
+The program took a total time of 43.56s and memory of 325MB. The step with the maximum memory allocation required 128MB.
 
 
 ## References
 1. Weinstein, John N., et al. 'The cancer genome atlas pan-cancer analysis project.' Nature genetics 45.10 (2013): 1113-1120.
-2. Tutorial on: 
+2. Tutorial on: [Iris Exploration (PCA, k-Means and GMM clustering) by Brian Burns](https://www.kaggle.com/bburns/iris-exploration-pca-k-means-and-gmm-clustering)
+3. Article on: [10 Clustering Algorithms With Python by Jason Brownlee](https://machinelearningmastery.com/clustering-algorithms-with-python/)
