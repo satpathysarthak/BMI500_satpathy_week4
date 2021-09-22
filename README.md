@@ -43,8 +43,15 @@ tar -xvzf TCGA-PANCAN-HiSeq-801x20531.tar.gz
 cd ..
 python main.py
 ```
-## Run time and memory allocations
+## Run time and memory requirements
+
+The following is the snippet of the time it took to run the code and memory used in the process:
+
+![Run_Mem](runtime_mem.png)
+
+The program took a total time of 43.56s and memory of 325MB. The step with the maximum memory allocation required 128MB space.
 
 
 ## References
 1. Weinstein, John N., et al. 'The cancer genome atlas pan-cancer analysis project.' Nature genetics 45.10 (2013): 1113-1120.
+2. Tutorial on: 
